@@ -1,0 +1,49 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block content %}
+<div class="flex-shrink-0 p-3 container ">
+
+    <table class="table table-striped table-hover caption-top shadow">
+        <caption>All holdings</caption>
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Ticker</th>
+                <th scope="col">Name</th>
+                <th scope="col">Value</th>
+                <th scope="col">Cost</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+
+            {% for holding in holdings %}
+
+            <tr>
+               <th scope="row">{{holding.ticker}}</th>
+               <td>{{holding.title}}</td>
+               <td>{{holding.value}}</td>
+               <td>{{holding.cost}}</td>
+               <td>
+                <div class="btn-group dropstart">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>. . .</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+               </td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+
+
+</div>
+{% endblock %}

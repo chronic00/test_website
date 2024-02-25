@@ -1,0 +1,48 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block content %}
+<div class="flex-shrink-0 p-3 container ">
+
+  <div class="row justify-content-evenly ">
+
+    <div class="col-sm-6 p-3">
+
+      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem;">
+        <div class="card-header text-bg-primary">
+          <h5 class="card-title">
+          Sumar</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Valoare: {{value}} EUR</li>
+          <li class="list-group-item">Investitii: {{cost}} EUR</li>
+          <li class="list-group-item">Profit: {{profit}} EUR</li>
+          <li class="list-group-item">Randament: {{randament}} %</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6 p-3">
+
+      <div class="card flex-nowrap shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem;">
+        <div class="card-header">
+          Sumar
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Valoare:</li>
+          <li class="list-group-item">Investitii:</li>
+          <li class="list-group-item">Randament: </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+
+
